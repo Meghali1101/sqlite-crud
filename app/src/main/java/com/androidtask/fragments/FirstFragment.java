@@ -51,9 +51,6 @@ public class FirstFragment extends Fragment implements View.OnClickListener{
         Cursor cursor = new MyHelper(getActivity()).getDetails();
         while (cursor.moveToNext()){
             ModelClass modelClass = new ModelClass(cursor.getString(0),cursor.getString(1),cursor.getString(2));
-            Log.e("id",cursor.getString(0));
-            Log.e("name",cursor.getString(1));
-            Log.e("email",cursor.getString(2));
             data.add(modelClass);
         }
 
